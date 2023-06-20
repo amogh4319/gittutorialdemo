@@ -79,14 +79,71 @@ console.dir(document);
 //     even[i].style.backgroundColor="blue";
 // }
 
-var items=document.querySelectorAll(".list-group-item");
-console.log(items);
-if(items.length>=2){
-items[1].style.color="green";
-}
+// var items=document.querySelectorAll(".list-group-item");
+// console.log(items);
+// if(items.length>=2){
+// items[1].style.color="green";
+// }
 
-var odd=document.querySelectorAll("li:nth-child(odd)");
-for(var i=0;i<odd.length;i++){
-    odd[i].style.backgroundColor="green";
-}
+// var odd=document.querySelectorAll("li:nth-child(odd)");
+// for(var i=0;i<odd.length;i++){
+//     odd[i].style.backgroundColor="green";
+// }
+
+var itemList=document.querySelector("#items");
+//parent node
+// console.log(itemList.parentNode);
+// //parentElement
+// console.log(itemList.parentElement);
+
+//child nodes
+// console.log(itemList.childNodes);
+// console.log(itemList.parentElement.parentElement);
+// console.log(itemList.children);
+// console.log(itemList.children[1]);
+// itemList.children[1].style.backgroundColor="yellow";
+// //first child
+// console.log(itemList.firstChild);
+// //first element child
+// console.log(itemList.firstElementChild);
+// //last element child
+// console.log(itemList.lastElementChild);
+//next sibling
+// console.log(itemList.nextSibling);
+// //previous element siling
+// console.log(itemList.previousElementSibling);
+
+//create element
+var newDiv=document.createElement("div");
+
+//add class name
+newDiv.className="Hello";
+
+//add id
+newDiv.id="hello 1";
+
+//add attribute
+newDiv.setAttribute("title","hello div");
+
+//create text node
+var newDivText=document.createTextNode("HEllo world!");
+
+//add text to div
+newDiv.appendChild(newDivText);
+
+var container=document.querySelector("header .container");
+var h1=document.querySelector("header h1");
+container.insertBefore(newDiv,h1);
+newDiv.style.fontSize="30px";
+
+var firstItem = document.querySelector('#items li:first-child');
+
+// Create a new text node with the "Hello World" text
+var helloText = document.createTextNode('HEllo World');
+
+// Insert the new text node before the first item
+firstItem.parentNode.insertBefore(helloText, firstItem);
+
+
+console.log(newDiv);
 
